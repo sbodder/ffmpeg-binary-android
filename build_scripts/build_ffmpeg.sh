@@ -32,9 +32,9 @@ if [ "$FLAVOR" = "lite" ]; then
     ARM_SYSROOT=$NDK/platforms/android-16/arch-arm/
     X86_SYSROOT=$NDK/platforms/android-16/arch-x86/
 else 
-    # FULL flavor require android 21 at minimum (because of including openssl)
-    ARM_SYSROOT=$NDK/platforms/android-21/arch-arm/
-    X86_SYSROOT=$NDK/platforms/android-21/arch-x86/
+    # FULL flavor require android 16 at minimum (because of including openssl) -- changed by SOD
+    ARM_SYSROOT=$NDK/platforms/android-16/arch-arm/
+    X86_SYSROOT=$NDK/platforms/android-16/arch-x86/
 fi
 ARM_PREBUILT=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/$OS
 X86_PREBUILT=$NDK/toolchains/x86-4.9/prebuilt/$OS
@@ -507,7 +507,7 @@ if [ "$FLAVOR" = "full" ]; then
         --enable-libx264 \
         --enable-libfdk-aac \
         --enable-bsf=aac_adtstoasc \
-        --enable-openssl \
+       # --enable-openssl \
         --enable-libfreetype  \
         --enable-libfontconfig \
         --enable-zlib \
