@@ -506,7 +506,8 @@ if [ "$FLAVOR" = "full" ]; then
         --enable-libvorbis \
         --enable-libx264 \
         --enable-libfdk-aac \
-        --enable-bsf=aac_adtstoasc \    
+        --enable-bsf=aac_adtstoasc \
+        --disable-openssl \
         --enable-libfreetype  \
         --enable-libfontconfig \
         --enable-zlib \
